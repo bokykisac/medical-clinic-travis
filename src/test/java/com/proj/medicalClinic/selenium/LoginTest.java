@@ -17,7 +17,7 @@ public class LoginTest {
     private WebDriver browser;
     private WelcomePage welcomePage;
 
-    private static final String baseUrl = "http://localhost:3000";
+    private static final String baseUrl = "https://peaceful-wave-53119.herokuapp.com";
 
     @BeforeMethod
     public void setUp() {

@@ -26,7 +26,7 @@ public class PatientScheduleAppointmentTest {
     private PatientSelectDoctorAndTimePage patientSelectDoctorAndTimePage;
     private PatientSelectFastAppointment patientSelectFastAppointment;
 
-    private static final String baseUrl = "http://localhost:3000";
+    private static final String baseUrl = "https://peaceful-wave-53119.herokuapp.com";
 
     @BeforeMethod
     public void setUp() {

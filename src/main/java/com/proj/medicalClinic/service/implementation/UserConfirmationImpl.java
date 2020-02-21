@@ -73,7 +73,7 @@ public class UserConfirmationImpl implements UserConfirmation {
 
             try {
                 Long my_timestamp = System.currentTimeMillis();
-                this.emailService.sendNotificaitionAsync(updated, "\n\nYour account has been approved.<br></br><a href=\"http://localhost:3000/confirm_auth?id="+pass+"&timestamp="+my_timestamp+ "&broj="+ id+"\">Activate</a>");
+                this.emailService.sendNotificaitionAsync(updated, "\n\nYour account has been approved.<br></br><a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_auth?id="+pass+"&timestamp="+my_timestamp+ "&broj="+ id+"\">Activate</a>");
 
             } catch( Exception e ){
             }

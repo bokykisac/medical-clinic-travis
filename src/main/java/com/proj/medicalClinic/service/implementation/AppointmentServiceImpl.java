@@ -207,7 +207,7 @@ public class AppointmentServiceImpl implements AppointmentService {
 
         Long app = appointmentId;
         try {
-            this.emailService.sendNotificaitionAsync(patient, "<a href=\"http://localhost:3000/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"http://localhost:3000/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
+            this.emailService.sendNotificaitionAsync(patient, "<a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -404,7 +404,7 @@ public class AppointmentServiceImpl implements AppointmentService {
 
             Long app = appointmentRequestDTO.getAppId();
             try {
-                this.emailService.sendNotificaitionAsync(patient, "<a href=\"http://localhost:3000/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"http://localhost:3000/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
+                this.emailService.sendNotificaitionAsync(patient, "<a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -474,7 +474,7 @@ public class AppointmentServiceImpl implements AppointmentService {
                         Long app = ex.getId();
 
                         try {
-                            this.emailService.sendNotificaitionAsync(patient, "<a href=\"http://localhost:3000/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"http://localhost:3000/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
+                            this.emailService.sendNotificaitionAsync(patient, "<a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
                         }catch (Exception e){
                             e.printStackTrace();
                         }
@@ -591,7 +591,7 @@ public class AppointmentServiceImpl implements AppointmentService {
 
             //POSALJI MAIL PACIJENTU
             try {
-                this.emailService.sendNotificaitionAsync(patient, "<a href=\"http://localhost:3000/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"http://localhost:3000/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
+                this.emailService.sendNotificaitionAsync(patient, "<a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=2&app="+app+"\">Confirm</a> <br></br> <a href=\"https://peaceful-wave-53119.herokuapp.com/confirm_exam?"+"val=3&app=" + app + "\""+">Deny</a>", "Appointment confirmation");
             }catch (Exception e){
                 e.printStackTrace();
             }

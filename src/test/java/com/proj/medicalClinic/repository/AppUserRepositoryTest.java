@@ -51,16 +51,16 @@ public class AppUserRepositoryTest {
     //FIND BY EMAIL
     @Test
     public void shouldReturnAppUserWhenFindingExistingAppUserByEmail(){
-        Optional<AppUser> foundAppUser = appUserRepository.findByEmail("Miljana@gmail.com");
+        Optional<AppUser> foundAppUser = appUserRepository.findByEmail("Miljana@mailinator.com");
         System.out.println("\n\n\n\n\n"+foundAppUser.get().getEmail());
 
         assertTrue("App user does exist", foundAppUser.isPresent());
-        assertEquals("AppUser contains correct email", foundAppUser.get().getEmail(), "Miljana@gmail.com");
+        assertEquals("AppUser contains correct email", foundAppUser.get().getEmail(), "Miljana@mailinator.com");
     }
 
     @Test
     public void shouldReturnEmptyOptionalWhenFindingNonExistingUserByEmail(){
-        Optional<AppUser> foundAppUser = appUserRepository.findByEmail("neki@gmail.com");
+        Optional<AppUser> foundAppUser = appUserRepository.findByEmail("neki@mailinator.com");
 
         assertFalse("App user does not exist", foundAppUser.isPresent());
     }

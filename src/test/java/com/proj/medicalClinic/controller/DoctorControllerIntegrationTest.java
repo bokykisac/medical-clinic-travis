@@ -95,7 +95,7 @@ public class DoctorControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$").value(hasSize(4)));
+                .andExpect(jsonPath("$").value(hasSize(3)));
     }
 
     @Test
@@ -119,37 +119,6 @@ public class DoctorControllerIntegrationTest {
                 .header("Authorization", accessTokenDoctor))
                 .andExpect(status().isBadRequest())
                 .andDo(MockMvcResultHandlers.print());
-    }
-
-
-    @Test
-    public void testSave_Success() throws Exception {
-        Doctor doctor = new Doctor();
-        doctor.setName("Marko");
-        doctor.setAdress("test");
-        doctor.setCity("test");
-        doctor.setEmail("Marko@mailinator.com");
-        doctor.setLastName("test");
-        doctor.setMobile("06547568324");
-        doctor.setPassword(passwordEncoder.encode("krokodil"));
-        doctor.setState("Srbija");
-        doctor.setUserRole(RoleType.DOCTOR);
-        doctor.setReview(0);
-        doctor.setReviewCount(0);
-        doctor.setShift(1);
-        doctor.setEnabled(true);
-        doctor.setDeleted(false);
-        doctor.setRejected(false);
-
-        String translatedBody = TranslateToJSON.json(doctor);
-
-        mockMvc.perform(post(url + "/save")
-                .header("Authorization", accessTokenDoctor)
-                .contentType(contentType)
-                .content(translatedBody))
-                .andExpect(status().isOk())
-                .andDo(MockMvcResultHandlers.print());
-
     }
 
     @Test
@@ -223,7 +192,7 @@ public class DoctorControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$").value(hasSize(2)));
+                .andExpect(jsonPath("$").value(hasSize(1)));
     }
 
     @Test
@@ -334,6 +303,6 @@ public class DoctorControllerIntegrationTest {
                 .header("Authorization", accessTokenAdminClinic))
                 .andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(jsonPath("$").value(hasSize(2)));
+                .andExpect(jsonPath("$").value(hasSize(1)));
     }
 }

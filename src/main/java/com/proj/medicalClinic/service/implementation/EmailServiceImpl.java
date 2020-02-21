@@ -27,7 +27,7 @@ public class EmailServiceImpl implements EmailService {
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
 
-        mailSender.setUsername("isa.psw.tim17@gmail.com");
+        mailSender.setUsername("isa.psw.2019.tim.17@gmail.com");
         mailSender.setPassword("krokodil123");
 
         Properties props = mailSender.getJavaMailProperties();
@@ -56,7 +56,7 @@ public class EmailServiceImpl implements EmailService {
         helper.setTo(user.getEmail());
         helper.setSubject("Account activation");
 
-        helper.setFrom("isa.psw.tim17@gmail.com");
+        helper.setFrom("isa.psw.2019.tim.17@gmail.com");
 
         getJavaMailSender().send(mimi);
 
@@ -74,7 +74,7 @@ public class EmailServiceImpl implements EmailService {
         helper.setText(htmlMsg, true); // Use this or above line.
         helper.setTo(user.getEmail());
         helper.setSubject(subject);
-        helper.setFrom("isa.psw.tim17@gmail.com");
+        helper.setFrom("isa.psw.2019.tim.17@gmail.com");
         getJavaMailSender().send(mimi);
 
 

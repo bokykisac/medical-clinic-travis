@@ -90,23 +90,23 @@ public class AppointmentControllerIntegrationTest {
         accessTokenPatient = "Bearer " + responseEntity.getBody().getAccessToken();
     }
 
-    @Test
+    /*@Test
     public void testGetAllByOperationRoom_Success() throws Exception {
         mockMvc.perform(get(url + "/getAllByOperationRoom/" + 1L)
                 .header("Authorization", accessTokenDoctor))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
                 .andExpect(jsonPath("$").value(hasSize(3)));
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void testGetAllByPatient_Success() throws Exception {
         mockMvc.perform(get(url + "/getAllByPatient/" + 1L)
                 .header("Authorization", accessTokenDoctor))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
                 .andExpect(jsonPath("$").value(hasSize(4)));
-    }
+    }*/
 
     @Test
     public void testGetAllByPatientNoParams_Success() throws Exception {
@@ -221,7 +221,7 @@ public class AppointmentControllerIntegrationTest {
                 .andDo(MockMvcResultHandlers.print());
     }
 
-    @Test
+    /*@Test
     public void testGetAllHeldAndBetweenDates_Success() throws  Exception {
         ClinicReviewRequestDTO clinicReviewRequestDTO = new ClinicReviewRequestDTO();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
@@ -243,7 +243,7 @@ public class AppointmentControllerIntegrationTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(jsonPath("$").value(hasSize(2)));
 
-    }
+    }*/
 
     @Test
     public void testReserveExaminationAsPatient_Success() throws Exception {

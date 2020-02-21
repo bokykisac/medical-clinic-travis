@@ -10,10 +10,11 @@ before_install:
   
 #Komewntar
 #Komentar3
+"${HOME}"
 
 before_script:
   # include ChromeDriver in PATH
-  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/bin/chromedriver"
+  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/src/test/resources/chromedriver"
   # start Chrome and listen on localhost
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   

@@ -95,7 +95,7 @@ public class DoctorControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$").value(hasSize(3)));
+                .andExpect(jsonPath("$").value(hasSize(2)));
     }
 
     @Test
@@ -192,7 +192,7 @@ public class DoctorControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$").value(hasSize(1)));
+                .andExpect(jsonPath("$").value(hasSize(2)));
     }
 
     @Test
@@ -303,6 +303,6 @@ public class DoctorControllerIntegrationTest {
                 .header("Authorization", accessTokenAdminClinic))
                 .andExpect(status().isOk())
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(jsonPath("$").value(hasSize(1)));
+                .andExpect(jsonPath("$").value(hasSize(2)));
     }
 }

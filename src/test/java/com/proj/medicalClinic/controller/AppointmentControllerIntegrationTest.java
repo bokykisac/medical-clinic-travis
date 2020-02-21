@@ -96,7 +96,7 @@ public class AppointmentControllerIntegrationTest {
                 .header("Authorization", accessTokenDoctor))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$").value(hasSize(3)));
+                .andExpect(jsonPath("$").value(hasSize(2)));
     }
 
     @Test
@@ -105,7 +105,7 @@ public class AppointmentControllerIntegrationTest {
                 .header("Authorization", accessTokenDoctor))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
-                .andExpect(jsonPath("$").value(hasSize(4)));
+                .andExpect(jsonPath("$").value(hasSize(3)));
     }
 
     @Test
@@ -241,7 +241,7 @@ public class AppointmentControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(jsonPath("$").value(hasSize(2)));
+                .andExpect(jsonPath("$").value(hasSize(1)));
 
     }
 

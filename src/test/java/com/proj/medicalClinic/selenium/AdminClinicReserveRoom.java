@@ -28,7 +28,7 @@ public class AdminClinicReserveRoom {
 
     @BeforeMethod
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         browser = new ChromeDriver();
 
         browser.manage().window().maximize();

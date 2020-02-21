@@ -9,7 +9,7 @@ before_install:
   - chmod +x mvnw
   
 #Komewntar
-#Komentar2
+#Komentar3
   
 script:
   - "./mvnw clean install -DskipTests=true -B"

@@ -12,7 +12,7 @@ before_install:
   
 script:
   - "./mvnw clean install -DskipTests=true -B"
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bokykisac_medical-clinic-travis
+  - ./mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=bokykisac_medical-clinic-travis
   
 dist: trusty
 

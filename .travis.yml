@@ -14,6 +14,8 @@ before_install:
   - curl -Ls -o codacy-coverage-reporter-assembly.jar "https://dl.bintray.com/codacy/Binaries/${LATEST_VERSION}/codacy-coverage-reporter-assembly.jar"
   - export MAVEN_OPTS=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
   
+#Komewntar
+  
 script:
   - "./mvnw clean install -DskipTests=false -B"
   

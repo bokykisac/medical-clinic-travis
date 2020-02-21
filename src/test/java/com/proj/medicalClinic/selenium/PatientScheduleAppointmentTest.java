@@ -30,7 +30,7 @@ public class PatientScheduleAppointmentTest {
 
     @BeforeMethod
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/bin/chromedriver");
         browser = new ChromeDriver();
 
         browser.manage().window().maximize();

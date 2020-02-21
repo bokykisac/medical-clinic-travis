@@ -85,7 +85,7 @@ insert into appointment (type, date, duration, fast, clinic_id, nurse_id, patien
 values ('OP', '2019-1-12 10:00', 90, false, 1, 6, 1, 2, 2, true, 2,0);
 
 insert into appointment (type, date, duration, fast, clinic_id, nurse_id, patient_id, service_id, operation_room_id, held, confirmed, version)
-values ('OP', '2019-7-12 13:00', 90, false, 1, 5, 1, 2, 1, true, 2,0);
+values ('OP', '2019-7-12 13:00', 90, false, 1, 5, 1, 2, null, true, 2,0);
 
 insert into appointment (type, date, duration, fast, clinic_id, nurse_id, patient_id, service_id, operation_room_id, held, confirmed, version)
 values ('EX', '2019-7-12 15:00', 90, false, 1, 5, 1, 2, null, true, 1,0);

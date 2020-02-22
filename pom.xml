@@ -164,7 +164,6 @@
 					<excludes>
 						<exclude>com/sivalabs/jblogger/entities/*</exclude>
 						<exclude>com/sivalabs/jblogger/*Application</exclude>
-						<exclude>META-INF/**</exclude>
 					</excludes>
 				</configuration>
 				<executions>

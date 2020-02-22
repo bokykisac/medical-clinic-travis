@@ -6,11 +6,11 @@ services:
   - postgressql
     
 before_install:
+  - echo ${HOME}
   - chmod +x mvnw
   
 #Komewntar
 #Komentar3
-puts ${HOME}
 
 before_script:
   # include ChromeDriver in PATH

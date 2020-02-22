@@ -17,7 +17,7 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 
-  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/build/bokykisac/medical-clinic-travis/src/test/resources"
+  - ln --symbolic /usr/local/share/chromedriver "${HOME}/build/bokykisac/medical-clinic-travis/src/test/resources"
 
   
 script:

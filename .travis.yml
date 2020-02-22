@@ -10,7 +10,7 @@ before_install:
   - chmod +x mvnw
   
 #Komewntar
-#Komentar4
+#Komentar5
 
 #before_script:
   # include ChromeDriver in PATH

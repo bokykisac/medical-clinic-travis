@@ -14,7 +14,7 @@ before_install:
 
 before_script:
   # include ChromeDriver in PATH
-  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/src/test/resources/chromedriver"
+  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/build/bokykisac/medical-clinic-travis/src/test/resources"
   # start Chrome and listen on localhost
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   

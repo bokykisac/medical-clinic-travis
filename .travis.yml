@@ -14,9 +14,11 @@ before_install:
 
 before_script:
   # include ChromeDriver in PATH
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 
   - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/build/bokykisac/medical-clinic-travis/src/test/resources"
-  # start Chrome and listen on localhost
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+
   
 script:
   - "./mvnw clean install -q -DskipTests=false -B"
@@ -30,6 +32,11 @@ deploy:
     app: floating-lowlands-68738
     
 install:
+  - wget -N http://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
   - sudo apt-get install jq
   - LATEST_VERSION="$(curl -Ls https://api.bintray.com/packages/codacy/Binaries/codacy-coverage-reporter/versions/_latest | jq -r .name)"
   - curl -Ls -o codacy-coverage-reporter-assembly.jar "https://dl.bintray.com/codacy/Binaries/${LATEST_VERSION}/codacy-coverage-reporter-assembly.jar"
@@ -37,9 +44,6 @@ install:
     
 addons:
   chrome: stable
-  apt:
-    packages:
-      - chromium-chromedriver
   sonarcloud:
     organization: "isa-psw-tim-17"
     token:

@@ -2,6 +2,7 @@ package com.proj.medicalClinic.selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,6 +23,7 @@ public class LoginTest {
     @BeforeMethod
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+        ChromeOptions opt = new ChromeOptions();
         opt.addArguments("disable-infobars");
         opt.addArguments("--start-maximized");
         opt.addArguments("--disable-extensions");

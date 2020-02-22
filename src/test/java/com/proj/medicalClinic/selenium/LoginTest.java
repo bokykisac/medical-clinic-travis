@@ -22,7 +22,10 @@ public class LoginTest {
     @BeforeMethod
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
-        browser = new ChromeDriver();
+        opt.addArguments("disable-infobars");
+        opt.addArguments("--start-maximized");
+        opt.addArguments("--disable-extensions");
+        browser = new ChromeDriver(opt);
 
         browser.manage().window().maximize();
         browser.navigate().to(baseUrl);

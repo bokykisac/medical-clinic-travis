@@ -10,7 +10,7 @@ before_install:
   
 #Komewntar
 #Komentar3
-"${HOME}"
+puts ${HOME}
 
 before_script:
   # include ChromeDriver in PATH
